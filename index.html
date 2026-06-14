@@ -40,12 +40,12 @@ a { color: inherit; text-decoration: none; }
 img { max-width: 100%; }
 button { cursor: pointer; font-family: inherit; border: none; background: none; }
 
-/* ===== CITY BG ===== */
-.city-bg-fixed {
+/* ===== TECH BG ===== */
+.tech-bg-fixed {
   position: fixed; inset: 0; z-index: 0;
   background: 
-    linear-gradient(to bottom, rgba(4,6,10,0.55) 0%, rgba(4,6,10,0.30) 30%, rgba(4,6,10,0.62) 70%, rgba(4,6,10,0.97) 100%),
-    url('https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=1920&q=80') center 30% / cover no-repeat;
+    linear-gradient(to bottom, rgba(4,6,10,0.62) 0%, rgba(4,6,10,0.40) 30%, rgba(4,6,10,0.68) 70%, rgba(4,6,10,0.97) 100%),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80') center 35% / cover no-repeat;
   pointer-events: none;
 }
 
@@ -118,10 +118,8 @@ section { position: relative; z-index: 2; }
 .hero-visual { order: 2; display: flex; justify-content: center; }
 .hero-card-wrap { position: relative; }
 .profile-card { width: 300px; padding: 2.5rem 2rem; text-align: center; }
-.profile-img-wrap { width: 120px; height: 120px; margin: 0 auto 1.25rem; border-radius: 50%; overflow: hidden; border: 2px solid rgba(212,168,84,0.3); box-shadow: 0 0 30px rgba(212,168,84,0.15), 0 8px 32px rgba(0,0,0,0.6); background: rgba(20,15,5,0.8); display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative; }
+.profile-img-wrap { width: 120px; height: 120px; margin: 0 auto 1.25rem; border-radius: 50%; overflow: hidden; border: 2px solid rgba(212,168,84,0.3); box-shadow: 0 0 30px rgba(212,168,84,0.15), 0 8px 32px rgba(0,0,0,0.6); background: rgba(20,15,5,0.8); display: flex; align-items: center; justify-content: center; position: relative; }
 .profile-img-wrap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.profile-img-wrap .upload-overlay { position: absolute; inset: 0; border-radius: 50%; background: rgba(0,0,0,0.75); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); color: var(--amber-light); font-size: 0.65rem; font-family: var(--font-label); gap: 0.3rem; }
-.profile-img-wrap:hover .upload-overlay { opacity: 1; }
 .profile-img-wrap i.placeholder { font-size: 3rem; color: var(--amber); opacity: 0.6; }
 .profile-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem; }
 .profile-role { font-size: 0.72rem; color: var(--amber); font-weight: 500; font-family: var(--font-label); margin-bottom: 1.25rem; letter-spacing: 0.04em; }
@@ -142,21 +140,13 @@ section { position: relative; z-index: 2; }
 .hero-scroll i { font-size: 0.9rem; color: var(--amber); opacity: 0.6; }
 @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(6px);} }
 
-.cv-upload-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; background: rgba(212,168,84,0.06); border: 1px dashed rgba(212,168,84,0.25); border-radius: 10px; margin-top: 0.5rem; transition: border-color var(--transition); cursor: pointer; }
-.cv-upload-row:hover { border-color: rgba(212,168,84,0.4); }
-.cv-upload-row i { color: var(--amber); font-size: 1rem; }
-.cv-upload-label { font-size: 0.72rem; font-family: var(--font-label); color: var(--text-secondary); flex: 1; }
-.cv-upload-label strong { color: var(--text-primary); display: block; font-size: 0.78rem; }
-
 /* ===== ABOUT ===== */
 #about { padding: 8rem 0; }
 .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
 .about-img-col { position: sticky; top: 100px; }
 .about-img-card { padding: 2rem; text-align: center; }
-.about-avatar { width: 160px; height: 160px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; background: rgba(20,15,5,0.8); border: 2px solid rgba(212,168,84,0.25); box-shadow: 0 0 40px rgba(212,168,84,0.12), 0 20px 60px rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; font-size: 4.5rem; color: var(--amber); opacity: 0.8; cursor: pointer; position: relative; }
+.about-avatar { width: 160px; height: 160px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; background: rgba(20,15,5,0.8); border: 2px solid rgba(212,168,84,0.25); box-shadow: 0 0 40px rgba(212,168,84,0.12), 0 20px 60px rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; font-size: 4.5rem; color: var(--amber); opacity: 0.8; position: relative; }
 .about-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.about-avatar .upload-overlay { position: absolute; inset: 0; border-radius: 50%; background: rgba(0,0,0,0.78); display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; transition: opacity var(--transition); color: var(--amber-light); font-size: 0.7rem; font-family: var(--font-label); gap: 0.3rem; }
-.about-avatar:hover .upload-overlay { opacity: 1; }
 .about-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--text-primary); }
 .about-pos { font-family: var(--font-label); font-size: 0.75rem; font-weight: 500; color: var(--amber); margin: 0.25rem 0 1.25rem; letter-spacing: 0.04em; }
 .info-chip { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(212,168,84,0.1); border: 1px solid rgba(212,168,84,0.25); color: var(--amber-light); border-radius: 100px; font-size: 0.7rem; font-weight: 500; padding: 0.3rem 0.75rem; font-family: var(--font-label); }
@@ -281,41 +271,6 @@ section { position: relative; z-index: 2; }
 .form-success { display: none; padding: 1rem 1.25rem; border-radius: 12px; background: rgba(100,160,100,0.1); border: 1px solid rgba(100,160,100,0.22); color: #7cc07c; font-size: 0.83rem; font-weight: 500; font-family: var(--font-label); align-items: center; gap: 0.5rem; }
 .form-error { display: none; padding: 1rem 1.25rem; border-radius: 12px; background: rgba(200,80,80,0.1); border: 1px solid rgba(200,80,80,0.22); color: #d47070; font-size: 0.83rem; font-weight: 500; font-family: var(--font-label); align-items: center; gap: 0.5rem; }
 
-/* ===== ADMIN ===== */
-.admin-fab { position: fixed; bottom: 2rem; left: 2rem; z-index: 1000; width: 44px; height: 44px; border-radius: 12px; background: rgba(8,10,18,0.88); border: 1px solid var(--border); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: var(--shadow); transition: all var(--transition); backdrop-filter: blur(10px); }
-.admin-fab:hover { background: var(--amber-glow); color: var(--amber-light); border-color: rgba(212,168,84,0.35); }
-.admin-modal { display: none; position: fixed; inset: 0; z-index: 9000; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 1rem; }
-.admin-modal.open { display: flex; }
-.admin-box { background: rgba(8,10,18,0.97); border-radius: 20px; padding: 2rem; max-width: 520px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: var(--shadow-lg); border: 1px solid var(--border); backdrop-filter: blur(20px); }
-.admin-box h2 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
-.admin-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-.admin-tab { font-family: var(--font-label); font-size: 0.72rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 8px; border: 1px solid var(--border); color: var(--text-secondary); transition: all var(--transition); background: transparent; }
-.admin-tab.active, .admin-tab:hover { background: var(--amber); color: #0a0800; border-color: var(--amber); }
-.admin-section { display: none; }
-.admin-section.active { display: block; }
-.admin-field { margin-bottom: 1rem; }
-.admin-field label { font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); font-family: var(--font-label); display: block; margin-bottom: 0.3rem; }
-.admin-field input, .admin-field textarea, .admin-field select { width: 100%; padding: 0.7rem 0.9rem; border-radius: 9px; background: rgba(240,200,120,0.04); border: 1px solid var(--border); color: var(--text-primary); font-family: var(--font-body); font-size: 0.85rem; outline: none; transition: border-color var(--transition); resize: none; }
-.admin-field input:focus, .admin-field textarea:focus { border-color: rgba(212,168,84,0.38); }
-.admin-field textarea { height: 80px; }
-.admin-field select option { background: #0a0c14; color: var(--text-primary); }
-.admin-save { width: 100%; padding: 0.75rem; border-radius: 9px; background: var(--amber); color: #0a0800; font-family: var(--font-label); font-size: 0.83rem; font-weight: 700; margin-top: 0.5rem; transition: all var(--transition); }
-.admin-save:hover { background: var(--amber-light); }
-.admin-close { float: right; color: var(--text-muted); font-size: 1.1rem; transition: color var(--transition); background: none; border: none; cursor: pointer; }
-.admin-close:hover { color: var(--text-primary); }
-
-/* Sync note */
-.sync-note { background: rgba(212,168,84,0.07); border: 1px solid rgba(212,168,84,0.18); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.72rem; color: var(--amber-light); font-family: var(--font-label); margin-bottom: 1rem; line-height: 1.5; }
-.sync-note strong { display: block; margin-bottom: 0.2rem; }
-
-.inbox-list { display: flex; flex-direction: column; gap: 0.75rem; }
-.inbox-item { padding: 0.875rem 1rem; background: rgba(240,200,120,0.04); border-radius: 10px; border: 1px solid var(--border); }
-.inbox-item-from { font-size: 0.75rem; font-weight: 600; color: var(--text-primary); font-family: var(--font-label); }
-.inbox-item-sub { font-size: 0.68rem; color: var(--amber-light); font-family: var(--font-label); margin: 0.15rem 0; }
-.inbox-item-msg { font-size: 0.75rem; color: var(--text-secondary); }
-.inbox-item-date { font-size: 0.62rem; color: var(--text-muted); font-family: var(--font-label); margin-top: 0.3rem; }
-.inbox-empty { text-align: center; color: var(--text-muted); font-size: 0.83rem; padding: 2rem; }
-
 /* ===== FOOTER ===== */
 footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3rem 0 2rem; border-top: 1px solid var(--border); position: relative; z-index: 2; }
 .footer-inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; }
@@ -369,7 +324,7 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
 </head>
 <body>
 
-<div class="city-bg-fixed"></div>
+<div class="tech-bg-fixed"></div>
 <div id="scroll-progress"></div>
 
 <div id="loader">
@@ -378,9 +333,6 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
 </div>
 
 <canvas id="particles-canvas"></canvas>
-
-<input type="file" id="photo-input" accept="image/*" style="display:none" />
-<input type="file" id="cv-input" accept=".pdf,.doc,.docx" style="display:none" />
 
 <!-- NAV -->
 <nav id="navbar">
@@ -425,28 +377,14 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
         <p class="hero-desc">Providing reliable hardware, software, and technical support solutions with 3 years of hands-on experience in IT operations and troubleshooting.</p>
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
-          <button class="btn btn-outline" onclick="handleCVAction()">
-            <i class="fas fa-download"></i> <span id="cv-btn-label">Download CV</span>
-          </button>
-        </div>
-        <div class="cv-upload-row" id="cv-upload-row" onclick="document.getElementById('cv-input').click()" style="display:none;">
-          <i class="fas fa-file-upload"></i>
-          <div class="cv-upload-label">
-            <strong id="cv-file-name">No CV uploaded yet</strong>
-            Click to upload your CV (PDF or DOC)
-          </div>
+          <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View Projects</a>
         </div>
       </div>
       <div class="hero-visual fade-in-right">
         <div class="hero-card-wrap">
           <div class="glass-card profile-card">
-            <div class="profile-img-wrap" onclick="document.getElementById('photo-input').click()" title="Click to upload photo">
-              <img id="profile-photo-hero" src="" alt="Profile" style="display:none;" />
+            <div class="profile-img-wrap">
               <i class="fas fa-user placeholder" id="hero-placeholder"></i>
-              <div class="upload-overlay">
-                <i class="fas fa-camera" style="font-size:1.2rem;"></i>
-                <span>Upload Photo</span>
-              </div>
             </div>
             <div class="profile-name">Jefferson Gonzales</div>
             <div class="profile-role" id="profile-role-hero">IT Support Specialist</div>
@@ -486,13 +424,8 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
     <div class="about-grid">
       <div class="about-img-col fade-in-left">
         <div class="glass-card about-img-card">
-          <div class="about-avatar" onclick="document.getElementById('photo-input').click()" title="Click to upload photo">
-            <img id="profile-photo-about" src="" alt="Profile" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+          <div class="about-avatar">
             <i class="fas fa-user-tie" id="about-placeholder"></i>
-            <div class="upload-overlay">
-              <i class="fas fa-camera" style="font-size:1.5rem;"></i>
-              <span>Upload Photo</span>
-            </div>
           </div>
           <div class="about-name">Jefferson Gonzales</div>
           <div class="about-pos">Computer Equipment Technician</div>
@@ -597,57 +530,43 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
     <div class="projects-grid">
 
       <div class="project-card fade-in">
-        <div class="project-img" style="background:linear-gradient(135deg,#0d1020,#121830);">📊</div>
+        <div class="project-img" style="background:linear-gradient(135deg,#0d1020,#121830);">💻</div>
         <div class="project-body">
           <div class="project-vibe">Live on Vercel</div>
-          <div class="project-title">IT Asset Monitoring System</div>
-          <p class="project-desc">Track IT assets across departments in real time. Features status updates, assignment tracking, and equipment lifecycle management — deployed and accessible online.</p>
+          <div class="project-title">Portfolio IT</div>
+          <p class="project-desc">My personal IT support portfolio — showcasing skills, experience, certifications, and projects in a single deployed site.</p>
           <div class="project-tech"><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Vercel</span></div>
           <div class="project-links">
-            <a href="https://github.com/qwe-s-projects3cxa" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://vercel.com/qwe-s-projects3cxa" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
+            <a href="https://github.com/jeffersonhub-it/portfolioit" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://portfolio-it-umber.vercel.app" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
           </div>
         </div>
       </div>
 
       <div class="project-card fade-in">
-        <div class="project-img" style="background:linear-gradient(135deg,#0d1a14,#101f18);">📦</div>
+        <div class="project-img" style="background:linear-gradient(135deg,#0d1a14,#101f18);">📊</div>
         <div class="project-body">
           <div class="project-vibe">Live on Vercel</div>
-          <div class="project-title">Inventory Management Dashboard</div>
-          <p class="project-desc">A dashboard for managing IT inventory — stock levels, equipment status, and automated alerts for low quantities or maintenance due dates. Live and functional.</p>
+          <div class="project-title">Department Encoding System</div>
+          <p class="project-desc">A web tool for encoding and organizing department-level records and data, streamlining day-to-day data entry tasks.</p>
           <div class="project-tech"><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Vercel</span></div>
           <div class="project-links">
-            <a href="https://github.com/qwe-s-projects3cxa" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://vercel.com/qwe-s-projects3cxa" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
+            <a href="https://github.com/jeffersonhub-it/Department-Encoding" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://department-encoding.vercel.app" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
           </div>
         </div>
       </div>
 
       <div class="project-card fade-in">
-        <div class="project-img" style="background:linear-gradient(135deg,#1a150d,#201a10);">🎫</div>
+        <div class="project-img" style="background:linear-gradient(135deg,#1a150d,#201a10);">🛰️</div>
         <div class="project-body">
           <div class="project-vibe">Live on Vercel</div>
-          <div class="project-title">IT Support Ticket Tracker</div>
-          <p class="project-desc">Log and resolve IT support requests with priority queues, technician assignment, status tracking, and resolution history. Fully deployed and accessible.</p>
+          <div class="project-title">ISS Monitoring</div>
+          <p class="project-desc">A live tracker displaying the real-time position and status of the International Space Station, built and deployed as a standalone app.</p>
           <div class="project-tech"><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Vercel</span></div>
           <div class="project-links">
-            <a href="https://github.com/qwe-s-projects3cxa" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://vercel.com/qwe-s-projects3cxa" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card fade-in">
-        <div class="project-img" style="background:linear-gradient(135deg,#0d1520,#101a28);">🗺️</div>
-        <div class="project-body">
-          <div class="project-vibe">Live on Vercel</div>
-          <div class="project-title">Network Topology Mapper</div>
-          <p class="project-desc">A visual mapper for office network topology — documents IP assignments, device connections, and switch/router configurations. Hosted publicly on Vercel.</p>
-          <div class="project-tech"><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">Vercel</span></div>
-          <div class="project-links">
-            <a href="https://github.com/qwe-s-projects3cxa" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://vercel.com/qwe-s-projects3cxa" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
+            <a href="https://github.com/cetiss00/issmonitoring" target="_blank" class="proj-btn gh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://issmonitoring.vercel.app" target="_blank" class="proj-btn demo"><i class="fas fa-external-link-alt"></i> View Live</a>
           </div>
         </div>
       </div>
@@ -776,7 +695,7 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
             <div class="contact-item"><div class="contact-item-icon"><i class="fas fa-clock"></i></div><div><div class="contact-item-label">Response Time</div><div class="contact-item-val">Within 24 Hours</div></div></div>
           </div>
           <div class="social-links">
-            <a href="https://github.com/qwe-s-projects3cxa" target="_blank" class="social-btn" id="link-gh" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/jeffersonhub-it" target="_blank" class="social-btn" id="link-gh" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="#" target="_blank" class="social-btn" id="link-li" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" target="_blank" class="social-btn" id="link-fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
           </div>
@@ -815,209 +734,14 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
 </footer>
 
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-<button class="admin-fab" onclick="openAdmin()" title="Admin Panel"><i class="fas fa-cog"></i></button>
-
-<!-- ADMIN MODAL -->
-<div class="admin-modal" id="admin-modal">
-  <div class="admin-box">
-    <h2><i class="fas fa-cog" style="color:var(--amber);margin-right:0.4rem;"></i> Admin Panel <button class="admin-close" onclick="closeAdmin()"><i class="fas fa-times"></i></button></h2>
-
-    <div class="admin-tabs">
-      <button class="admin-tab active" onclick="switchTab('status')">Status</button>
-      <button class="admin-tab" onclick="switchTab('cv')">CV</button>
-      <button class="admin-tab" onclick="switchTab('links')">Links</button>
-      <button class="admin-tab" onclick="switchTab('inbox')">Inbox</button>
-    </div>
-
-    <!-- STATUS TAB -->
-    <div class="admin-section active" id="tab-status">
-      <div class="sync-note">
-        <strong>💡 How status sync works</strong>
-        Your status is saved in this browser. To share it across devices, paste a status override in the URL: add <code>?status=open</code> to your portfolio link, or use the share link below after saving.
-      </div>
-      <div class="admin-field">
-        <label>Availability Status</label>
-        <select id="admin-status">
-          <option value="not-looking">Not Looking for New Opportunities</option>
-          <option value="open">Open to Opportunities</option>
-          <option value="employed">Currently Employed &amp; Available</option>
-          <option value="actively">Actively Looking</option>
-        </select>
-      </div>
-      <button class="admin-save" onclick="saveStatus()"><i class="fas fa-save"></i> Save Status</button>
-      <div style="margin-top:1rem;padding:0.75rem;background:rgba(212,168,84,0.06);border-radius:10px;border:1px solid rgba(212,168,84,0.15);">
-        <div style="font-size:0.68rem;color:var(--text-muted);font-family:var(--font-label);margin-bottom:0.4rem;">Share link with forced status (paste in browser):</div>
-        <code id="share-link-display" style="font-size:0.7rem;color:var(--amber-light);word-break:break-all;display:block;"></code>
-        <button onclick="copyShareLink()" style="margin-top:0.5rem;font-size:0.7rem;color:var(--amber);font-family:var(--font-label);font-weight:600;background:none;border:none;cursor:pointer;"><i class="fas fa-copy"></i> Copy Link</button>
-      </div>
-    </div>
-
-    <!-- CV TAB -->
-    <div class="admin-section" id="tab-cv">
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:1rem;">Upload your CV so visitors can download it from the hero section.</p>
-      <div class="admin-field">
-        <label>CV / Resume File</label>
-        <div class="cv-upload-row" onclick="document.getElementById('cv-input').click()">
-          <i class="fas fa-file-upload" style="color:var(--amber);font-size:1.1rem;"></i>
-          <div class="cv-upload-label"><strong id="admin-cv-filename">No file uploaded</strong>Click to upload PDF or DOC</div>
-        </div>
-      </div>
-      <div class="admin-field" style="margin-top:0.75rem;">
-        <label>Or paste a direct download link (Google Drive, Dropbox, etc.)</label>
-        <input type="url" id="admin-cv-url" placeholder="https://drive.google.com/uc?export=download&id=..." />
-      </div>
-      <button class="admin-save" onclick="saveCVLink()"><i class="fas fa-save"></i> Save CV Settings</button>
-    </div>
-
-    <!-- LINKS TAB -->
-    <div class="admin-section" id="tab-links">
-      <div class="admin-field"><label>GitHub URL</label><input type="url" id="admin-github" placeholder="https://github.com/qwe-s-projects3cxa" /></div>
-      <div class="admin-field"><label>LinkedIn URL</label><input type="url" id="admin-linkedin" placeholder="https://linkedin.com/in/yourprofile" /></div>
-      <div class="admin-field"><label>Facebook URL</label><input type="url" id="admin-facebook" placeholder="https://facebook.com/yourprofile" /></div>
-      <button class="admin-save" onclick="saveLinks()"><i class="fas fa-save"></i> Save Links</button>
-    </div>
-
-    <!-- INBOX TAB -->
-    <div class="admin-section" id="tab-inbox">
-      <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:1rem;">Messages from your contact form.</p>
-      <div class="inbox-list" id="inbox-list"><div class="inbox-empty"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:0.5rem;opacity:0.3;"></i>No messages yet.</div></div>
-      <button class="admin-save" style="background:#6b2020;margin-top:1rem;" onclick="clearInbox()"><i class="fas fa-trash"></i> Clear All Messages</button>
-    </div>
-
-  </div>
-</div>
 
 <script>
-// ═══════════════════════════════════════════
-// STORAGE HELPERS
-// ═══════════════════════════════════════════
-function store(key, val) { try { localStorage.setItem('jg_' + key, JSON.stringify(val)); } catch(e){} }
-function load(key, def) { try { const v = localStorage.getItem('jg_' + key); return v ? JSON.parse(v) : def; } catch(e){ return def; } }
-
-let siteData = load('data', {
-  status: 'not-looking',
-  cvUrl: '', cvFilename: '',
-  photo: '',
-  github: 'https://github.com/qwe-s-projects3cxa',
-  linkedin: '', facebook: '',
-  messages: []
-});
-
-// ═══════════════════════════════════════════
-// STATUS MAP — single source of truth
-// ═══════════════════════════════════════════
-const STATUS_MAP = {
-  'not-looking':  { hero: 'Not Looking for New Opportunities',  badge: 'Not Actively Looking', chip: 'Not Actively Looking', contact: 'Not Actively Looking — Open to Right Fit' },
-  'open':         { hero: 'Open to Opportunities',              badge: 'Open to Opportunities', chip: 'Open to Opportunities', contact: 'Open to Opportunities' },
-  'employed':     { hero: 'Currently Employed & Available',     badge: 'Employed & Available',  chip: 'Currently Employed',    contact: 'Currently Employed — Open to Right Fit' },
-  'actively':     { hero: 'Actively Looking for Opportunities', badge: 'Actively Looking',      chip: 'Actively Looking',      contact: 'Actively Looking for New Roles' },
-};
-
-function applyStatus(val) {
-  const s = STATUS_MAP[val] || STATUS_MAP['not-looking'];
-  const heroEl = document.getElementById('status-text');
-  const badgeEl = document.getElementById('badge-status-text');
-  const chipEl  = document.getElementById('about-chip');
-  const contactEl = document.getElementById('contact-status-val');
-  if (heroEl)    heroEl.textContent   = s.hero;
-  if (badgeEl)   badgeEl.textContent  = s.badge;
-  if (chipEl)    chipEl.innerHTML     = `<span class="info-dot"></span> ${s.chip}`;
-  if (contactEl) contactEl.textContent = s.contact;
-  // update select
-  const sel = document.getElementById('admin-status');
-  if (sel) sel.value = val;
-  // update share link preview
-  updateShareLink(val);
-}
-
-function updateShareLink(val) {
-  const base = window.location.origin + window.location.pathname;
-  const el = document.getElementById('share-link-display');
-  if (el) el.textContent = base + '?status=' + val;
-}
-function copyShareLink() {
-  const base = window.location.origin + window.location.pathname;
-  navigator.clipboard.writeText(base + '?status=' + (siteData.status || 'not-looking')).then(() => {
-    alert('Link copied! Share it or open it on any device to force that status.');
-  });
-}
-
-// ═══════════════════════════════════════════
-// CHECK URL PARAM FOR STATUS OVERRIDE
-// ═══════════════════════════════════════════
-function checkURLStatus() {
-  const params = new URLSearchParams(window.location.search);
-  const urlStatus = params.get('status');
-  if (urlStatus && STATUS_MAP[urlStatus]) {
-    siteData.status = urlStatus;
-    store('data', siteData);
-  }
-}
-
 // ═══════════════════════════════════════════
 // LOADER & INIT
 // ═══════════════════════════════════════════
 window.addEventListener('load', () => {
-  checkURLStatus();
   setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1700);
-  applyStoredData();
 });
-
-function applyStoredData() {
-  if (siteData.photo) setPhoto(siteData.photo);
-  applyStatus(siteData.status || 'not-looking');
-  if (siteData.cvFilename) {
-    document.getElementById('admin-cv-filename').textContent = siteData.cvFilename;
-    document.getElementById('cv-file-name').textContent = siteData.cvFilename;
-  }
-  if (siteData.cvUrl) document.getElementById('admin-cv-url').value = siteData.cvUrl;
-  if (siteData.github) { document.getElementById('admin-github').value = siteData.github; document.getElementById('link-gh').href = siteData.github; }
-  if (siteData.linkedin) { document.getElementById('admin-linkedin').value = siteData.linkedin; document.getElementById('link-li').href = siteData.linkedin; }
-  if (siteData.facebook) { document.getElementById('admin-facebook').value = siteData.facebook; document.getElementById('link-fb').href = siteData.facebook; }
-  renderInbox();
-}
-
-// ═══════════════════════════════════════════
-// PHOTO UPLOAD
-// ═══════════════════════════════════════════
-document.getElementById('photo-input').addEventListener('change', function(e) {
-  const file = e.target.files[0]; if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) { setPhoto(ev.target.result); siteData.photo = ev.target.result; store('data', siteData); };
-  reader.readAsDataURL(file); e.target.value = '';
-});
-
-function setPhoto(src) {
-  const heroImg = document.getElementById('profile-photo-hero');
-  const aboutImg = document.getElementById('profile-photo-about');
-  heroImg.src = src; heroImg.style.display = 'block';
-  const hp = document.getElementById('hero-placeholder'); if(hp) hp.style.display = 'none';
-  aboutImg.src = src; aboutImg.style.display = 'block';
-  const ap = document.getElementById('about-placeholder'); if(ap) ap.style.display = 'none';
-}
-
-// ═══════════════════════════════════════════
-// CV UPLOAD
-// ═══════════════════════════════════════════
-document.getElementById('cv-input').addEventListener('change', function(e) {
-  const file = e.target.files[0]; if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    siteData.cvUrl = ev.target.result; siteData.cvFilename = file.name; store('data', siteData);
-    document.getElementById('cv-file-name').textContent = file.name;
-    document.getElementById('admin-cv-filename').textContent = file.name;
-  };
-  reader.readAsDataURL(file); e.target.value = '';
-});
-
-function handleCVAction() {
-  if (siteData.cvUrl) {
-    const a = document.createElement('a'); a.href = siteData.cvUrl;
-    a.download = siteData.cvFilename || 'Jefferson_Gonzales_CV.pdf'; a.click();
-  } else {
-    alert('CV not uploaded yet. Click the ⚙️ button (bottom-left) → CV tab to upload your file or paste a download link.');
-  }
-}
 
 // ═══════════════════════════════════════════
 // PARTICLES
@@ -1111,61 +835,9 @@ async function handleFormSubmit(e) {
   const name=document.getElementById('c-name').value.trim(), email=document.getElementById('c-email').value.trim(), subject=document.getElementById('c-subject').value.trim(), message=document.getElementById('c-message').value.trim();
   if(!name||!email||!subject||!message){ errMsg.textContent='Please fill in all fields.'; errorEl.style.display='flex'; return; }
   btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...'; btn.disabled=true;
-  siteData.messages.unshift({name,email,subject,message,date:new Date().toLocaleString()});
-  store('data',siteData); renderInbox();
   const mailtoLink=`mailto:jeffersongonzales.hs@gmail.com?subject=${encodeURIComponent('[Portfolio] '+subject)}&body=${encodeURIComponent('From: '+name+' <'+email+'>\n\n'+message)}`;
   const f=document.createElement('iframe'); f.style.display='none'; f.src=mailtoLink; document.body.appendChild(f); setTimeout(()=>document.body.removeChild(f),3000);
   setTimeout(()=>{ btn.style.display='none'; success.style.display='flex'; ['c-name','c-email','c-subject','c-message'].forEach(id=>document.getElementById(id).value=''); },1000);
-}
-
-// ═══════════════════════════════════════════
-// ADMIN FUNCTIONS
-// ═══════════════════════════════════════════
-function openAdmin(){ document.getElementById('admin-modal').classList.add('open'); updateShareLink(siteData.status||'not-looking'); renderInbox(); }
-function closeAdmin(){ document.getElementById('admin-modal').classList.remove('open'); }
-document.getElementById('admin-modal').addEventListener('click', function(e){ if(e.target===this) closeAdmin(); });
-
-function switchTab(name) {
-  const tabs = ['status','cv','links','inbox'];
-  document.querySelectorAll('.admin-tab').forEach((t,i)=> t.classList.toggle('active', tabs[i]===name));
-  document.querySelectorAll('.admin-section').forEach(s=>s.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-}
-
-function saveStatus() {
-  const val = document.getElementById('admin-status').value;
-  siteData.status = val; store('data', siteData);
-  applyStatus(val); showSaved('Status updated!');
-}
-
-function saveCVLink() {
-  const url = document.getElementById('admin-cv-url').value.trim();
-  if(url){ siteData.cvUrl = url; siteData.cvFilename = 'CV.pdf'; store('data',siteData); }
-  showSaved('CV settings saved!');
-}
-
-function saveLinks() {
-  siteData.github   = document.getElementById('admin-github').value.trim();
-  siteData.linkedin = document.getElementById('admin-linkedin').value.trim();
-  siteData.facebook = document.getElementById('admin-facebook').value.trim();
-  store('data',siteData);
-  if(siteData.github)   document.getElementById('link-gh').href = siteData.github;
-  if(siteData.linkedin) document.getElementById('link-li').href = siteData.linkedin;
-  if(siteData.facebook) document.getElementById('link-fb').href = siteData.facebook;
-  showSaved('Links saved!');
-}
-
-function renderInbox() {
-  const list = document.getElementById('inbox-list');
-  if(!siteData.messages||siteData.messages.length===0){ list.innerHTML='<div class="inbox-empty"><i class="fas fa-inbox" style="font-size:2rem;display:block;margin-bottom:0.5rem;opacity:0.3;"></i>No messages yet.</div>'; return; }
-  list.innerHTML = siteData.messages.map(m=>`<div class="inbox-item"><div class="inbox-item-from">👤 ${m.name} &lt;${m.email}&gt;</div><div class="inbox-item-sub">📌 ${m.subject}</div><div class="inbox-item-msg">${m.message}</div><div class="inbox-item-date">🕐 ${m.date}</div></div>`).join('');
-}
-function clearInbox(){ if(!confirm('Clear all messages?')) return; siteData.messages=[]; store('data',siteData); renderInbox(); }
-
-function showSaved(msg) {
-  const tab = document.querySelector('.admin-tab.active');
-  const orig = tab.textContent; tab.textContent = '✓ ' + msg;
-  setTimeout(()=>tab.textContent=orig, 1800);
 }
 </script>
 </body>
