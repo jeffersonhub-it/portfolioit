@@ -837,9 +837,32 @@ async function handleFormSubmit(e) {
   const name=document.getElementById('c-name').value.trim(), email=document.getElementById('c-email').value.trim(), subject=document.getElementById('c-subject').value.trim(), message=document.getElementById('c-message').value.trim();
   if(!name||!email||!subject||!message){ errMsg.textContent='Please fill in all fields.'; errorEl.style.display='flex'; return; }
   btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Sending...'; btn.disabled=true;
-  const mailtoLink=`mailto:jeffersongonzales.hs@gmail.com?subject=${encodeURIComponent('[Portfolio] '+subject)}&body=${encodeURIComponent('From: '+name+' <'+email+'>\n\n'+message)}`;
-  const f=document.createElement('iframe'); f.style.display='none'; f.src=mailtoLink; document.body.appendChild(f); setTimeout(()=>document.body.removeChild(f),3000);
-  setTimeout(()=>{ btn.style.display='none'; success.style.display='flex'; ['c-name','c-email','c-subject','c-message'].forEach(id=>document.getElementById(id).value=''); },1000);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: 'a18a70d0-b731-43ca-81b6-5b81b4813f8e',
+        subject: '[Portfolio] ' + subject,
+        from_name: name,
+        name: name,
+        email: email,
+        message: message
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      btn.style.display='none'; success.style.display='flex';
+      ['c-name','c-email','c-subject','c-message'].forEach(id=>document.getElementById(id).value='');
+    } else {
+      throw new Error(data.message || 'Failed to send message.');
+    }
+  } catch (err) {
+    errMsg.textContent = err.message || 'Something went wrong. Please try again.';
+    errorEl.style.display='flex';
+    btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message'; btn.disabled=false;
+  }
 }
 </script>
 </body>
