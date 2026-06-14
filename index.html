@@ -108,8 +108,9 @@ section { position: relative; z-index: 2; }
 .hero-title { font-family: var(--font-label); font-size: clamp(0.9rem, 2vw, 1.05rem); font-weight: 400; color: #d0c8b8; letter-spacing: 0.02em; margin-bottom: 1.5rem; min-height: 1.6em; text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
 .hero-desc { font-size: 0.95rem; color: #c0b8a8; max-width: 480px; line-height: 1.8; margin-bottom: 2.5rem; text-shadow: 0 1px 8px rgba(0,0,0,0.5); }
 
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
 .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-label); font-size: 0.82rem; font-weight: 600; padding: 0.8rem 1.75rem; border-radius: 10px; transition: all var(--transition); letter-spacing: 0.02em; }
+.hero-btns .btn { font-size: 0.78rem; padding: 0.75rem 1.4rem; }
 .btn-primary { background: var(--amber); color: #0a0800; box-shadow: 0 4px 24px rgba(212,168,84,0.3); }
 .btn-primary:hover { background: var(--amber-light); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(212,168,84,0.4); }
 .btn-outline { border: 1px solid rgba(240,200,120,0.25); color: var(--text-primary); background: rgba(8,10,18,0.6); backdrop-filter: blur(8px); }
@@ -378,14 +379,15 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
         <div class="hero-btns">
           <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
           <a href="#projects" class="btn btn-outline"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="cv.pdf" download class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
         </div>
       </div>
       <div class="hero-visual fade-in-right">
         <div class="hero-card-wrap">
           <div class="glass-card profile-card">
-           <div class="profile-img-wrap">
-  <img src="profile.jpg" alt="Jefferson Gonzales" />
-</div>
+            <div class="profile-img-wrap">
+              <img src="profile.jpg" alt="Jefferson Gonzales" />
+            </div>
             <div class="profile-name">Jefferson Gonzales</div>
             <div class="profile-role" id="profile-role-hero">IT Support Specialist</div>
             <div class="profile-stats">
@@ -425,8 +427,8 @@ footer { background: rgba(2,3,6,0.98); color: rgba(255,255,255,0.45); padding: 3
       <div class="about-img-col fade-in-left">
         <div class="glass-card about-img-card">
           <div class="about-avatar">
-  <img src="profile.jpg" alt="Jefferson Gonzales" />
-</div>
+            <img src="profile.jpg" alt="Jefferson Gonzales" />
+          </div>
           <div class="about-name">Jefferson Gonzales</div>
           <div class="about-pos">Computer Equipment Technician</div>
           <span class="info-chip" id="about-chip"><span class="info-dot"></span> Not Actively Looking</span>
